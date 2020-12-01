@@ -58,10 +58,14 @@
   pointer-events: none;
 };
 
-::-moz-color-swatch {
-  opacity: 1;
-}
-
-::-webkit-color-swatch {
-  opacity: 1;
+#bloodColorPickerLabel {
+  width: calc(100% - 2px);
+  min-width: 20px;
+  height: 26px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  margin: 0;
+  color: #191813;  
+  border: 1px solid #7a7971;
+  border-radius: 3px;    
 }

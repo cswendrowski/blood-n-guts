@@ -214,25 +214,26 @@ export const getUID = (typeCode?: string): string => {
  * @function
  * @param {number} opacity
  */
-export const changeColorPickerOpacityHack = (opacity) => {
-  for (let i = 0; i < document.styleSheets.length; i++) {
-    const sheet = document.styleSheets[i];
-    // @ts-ignore
-    if (sheet.ownerNode?.attributes?.href?.value === 'modules/blood-n-guts/blood-n-guts.css') {
-      for (let j = 0; j < sheet.rules.length; j++) {
-        const rule = sheet.rules[j];
-        // @ts-ignore
-        if (rule.selectorText === '::-moz-color-swatch' || rule.selectorText === '::-webkit-color-swatch') {
-          // @ts-ignore
-          if (rule.style.opacity != opacity) {
-            log(LogLevel.DEBUG, 'changeColorPickerOpacityHack opacity', opacity);
-            // @ts-ignore
-            rule.style.opacity = opacity;
-          }
-        }
-      }
-    }
-  }
+export const changeColorPickerOpacityHack = (opacity: string | number): void => {
+  document.documentElement.style.setProperty('--bloodNGuts-swatch-opacity', String(opacity));
+  // for (let i = 0; i < document.styleSheets.length; i++) {
+  //   const sheet = document.styleSheets[i];
+  //   // @ts-ignore
+  //   if (sheet.ownerNode?.attributes?.href?.value === 'modules/blood-n-guts/blood-n-guts.css') {
+  //     for (let j = 0; j < sheet.rules.length; j++) {
+  //       const rule = sheet.rules[j];
+  //       // @ts-ignore
+  //       if (rule.selectorText === '::-moz-color-swatch' || rule.selectorText === '::-webkit-color-swatch') {
+  //         // @ts-ignore
+  //         if (rule.style.opacity != opacity) {
+  //           log(LogLevel.DEBUG, 'changeColorPickerOpacityHack opacity', opacity);
+  //           // @ts-ignore
+  //           rule.style.opacity = opacity;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 };
 
 /**
