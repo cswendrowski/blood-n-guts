@@ -1,12 +1,12 @@
 {
-	"name": "blood-n-guts",
-	"title": "Blood 'n Guts",
+	"name": "blood-n-guts-generic",
+	"title": "Blood 'n Guts (Generic)",
 	"description": "Blood 'n Guts creates blood spray and splatter when tokens recieve damage, drawing to the floor and tokens, and drawing trails of blood after tokens who have taken damage. Many options are configurable.",
 	"author": "edzillion",
-	"systems": ["dnd5e", "pf2e"],
-	"version": "0.7.5",
+	"systems": ["dnd5e", "pf2e", "archmage"],
+	"version": "0.8.0",
 	"minimumCoreVersion": "0.6.0",
-	"compatibleCoreVersion": "0.7.7",
+	"compatibleCoreVersion": "0.7.9",
 	"esmodules": [
 		"./blood-n-guts.js"
 	],
@@ -15,7 +15,7 @@
 		"../../blood-n-guts/custom.css"
 	],
 	"url": "https://github.com/edzillion/blood-n-guts",
-	"manifest": "https://raw.githubusercontent.com/edzillion/blood-n-guts/master/src/module.json",
-	"download": "https://github.com/edzillion/blood-n-guts/releases/download/v0.7.5/blood-n-guts-v0.7.5.zip",
-	"changelog": "https://github.com/edzillion/blood-n-guts/blob/v0.7.5/changelog.md"
+	"manifest": "https://raw.githubusercontent.com/cswendrowski/blood-n-guts/master/src/module.json",
+	"download": "https://github.com/cswendrowski/blood-n-guts/releases/download/v0.8.0/blood-n-guts-v0.8.0.zip",
+	"changelog": "https://github.com/cswendrowski/blood-n-guts/blob/v0.8.0/changelog.md"
 }
